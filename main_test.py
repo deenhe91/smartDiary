@@ -9,4 +9,3 @@ def test_get():
     response = app.get('/')
 
     assert response.status_int == 200
-    assert response.body == 'Hello, World!'
