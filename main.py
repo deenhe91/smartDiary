@@ -13,7 +13,14 @@ class Facebook(webapp2.RequestHandler):
         path = os.path.join(os.path.dirname(__file__), 'templates/facebook.html')
         self.response.out.write(template.render(path, {}))
 
+class Trends(webapp2.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), 'templates/trends.html')
+        self.response.out.write(template.render(path, {}))
+
+
 app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/facebook', Facebook),
+    ('/trends', Trends),
 ], debug=True)
