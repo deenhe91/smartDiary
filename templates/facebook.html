@@ -6,8 +6,33 @@
       </TITLE>
    </HEAD>
 <BODY>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1889353381281624',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+    </script>
    <H1>Hook Up Your Facebook</H1>
-   <P>Username:</P>
-   <P>Password:</P>
+   <div class="fb-login-button"
+    data-max-rows="1"
+    data-size="large"
+    data-button-type="continue_with"
+    data-show-faces="false"
+    data-auto-logout-link="false"
+    data-use-continue-as="false">
+   </div>
 </BODY>
 </HTML>
